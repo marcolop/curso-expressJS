@@ -27,7 +27,7 @@ app.get('/search', (req, res)=> {
     const category = req.query.categoria || 'Todas';
     res.send(`
        <h2>Resultados de Busqueda:</h2>
-       <p>Termino: ${terms}</p>
+       <p>Termino: ${term}</p>
        <p>Categoria: ${category}</p>
     `)
 })
