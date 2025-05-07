@@ -32,6 +32,17 @@ app.get('/search', (req, res)=> {
     `)
 })
 
+app.post('/form', (req, res ) => {
+   const name = req.body.nombre || 'Anónimo';
+   const email = req.body.email || 'No proporcionado';
+   res.json({
+      message: 'Datos recibidos',
+      data: {
+         name,
+         email
+      }
+   })
+})
 
 app.listen(PORT, () => {
     console.log(`Servidor: http://localhost:${PORT}`);
